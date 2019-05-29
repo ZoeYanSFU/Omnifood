@@ -213,17 +213,35 @@ header{
 	-webkit-transform:translate(30%,30%);
 	        transform:translate(30%,30%);
 }
-.logo{
+.logo
+{
 	height:100px;
 	width:auto;
 	float:left;
 	margin-top: 20px;
 }
+
+.logo-black
+{
+	display: none;
+	height:50px;
+	width:auto;
+	float:left;
+	margin: 5px 0;
+
+}
+
+.logo-black{
+	display: none;
+}
+/* Main Nav*/
+
 .main-nav{
 	float:right;
 	list-style: none;
 	margin-top:60px;
 }
+
 .main-nav li
 {
 	display:inline-block;
@@ -252,8 +270,47 @@ header{
 .main-nav li a:active
 {
 	border-bottom: 2px solid #e67e22;
-
 }
+
+/* Mobile navi*/
+.mobile-nav-icon{
+	float:right;
+	margin-top: 30px;
+	cursor:pointer;
+	display: none;
+}
+
+.mobile-nav-icon i {
+	font-size: 200%;
+	color:#fff;
+}
+
+
+/* Sticky navi*/
+.sticky-nav{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	background-color: rgba(255,255,255,0.98);
+	box-shadow: 0 2px 2px #efefef;
+	z-index:9999;  /*navigation panel is behind image; to solve that, we need to change the z-index.*/
+}
+
+.sticky-nav .main-nav{ margin-top:18px;}
+
+.sticky-nav .main-nav li a:link,
+.sticky-nav .main-nav li a:visited
+{
+	padding: 15px 0;
+	color:#555;
+}
+
+.sticky-nav .logo{display: none;}
+.sticky-nav .logo-black{display: block};
+
+
+
 
 /*----------------------------------------------------------------------------------*/
 /*Features*/
@@ -384,8 +441,8 @@ header{
 
 blockquote{
 	padding：2%；
-	font-style:italic;font-stylefont-style
-	line-height: 145%;line-height
+	font-style:italic;
+	line-height: 145%;
 	position: relative;
 	margin-top: 40px;
 }
@@ -492,8 +549,18 @@ input[type = checkbox]
 	outline: none;
 }
 
+.form-messages{
+	width: 70%;
+	margin: 0 auto;
+	padding:10px;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+.success{ background-color: rgba(38,191,68,0.8); }
+.error{ background-color: rgba(209,46,46,0.8); }
+
 /*----------------------------------------------------------------------------------*/
-/*Contact form  */
+/*Footer  */
 /*----------------------------------------------------------------------------------*/
 footer{
 	background-color: #333;
@@ -575,5 +642,30 @@ footer p {
 } 
 }
 
+
+/*----------------------------------------------------------------------------------*/
+/*Animation */
+/*----------------------------------------------------------------------------------*/
+.js--wp-feature,
+.js--wp-app-screen,
+.js--wp-city-row
+{
+	opacity: 0；;
+	-webkit-animation-duration:1s;
+	        animation-duration:1s
+
+}
+.js--wp-plan-box
+{
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+}
+
+.js--wp-feature.animated,
+.js--wp-app-screen.animated,
+.js--wp-city-row.animated
+{
+	opacity: 1;
+}
 
 
